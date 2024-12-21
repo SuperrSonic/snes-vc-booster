@@ -21,7 +21,7 @@ Edit wii.txt to change Wii Remote mappings. You can also manually set patches on
 
 --no-cc = Removes Classic Controller advertisement and makes loading games faster.
 
---gc-remap = Rotates the GameCube controller's ABXY so many games are more comfortable to play. (Super Mario World)
+--gc-remap = Rotates the GameCube controller's ABXY so many games are more comfortable to play.
 
 --wiimote-emu = Creates a C2 code based on wii.txt to allow Wii Remotes to control the game.
 
@@ -118,7 +118,7 @@ All 3 have the benefits of: saving space (usually 320KB->65KB), loading games wi
 
 # Known Issues:
 
-As there are over 70 SNES VC titles, I only tested about 10 titles. An incompatible title can usually be fixed if reported.
+As there are over 70 SNES VC titles, I only tested the main patches. An incompatible title can usually be fixed if reported.
 The patches to remove suspending and savefile creation are only compatible with certain titles. Applying them may trigger a "files corrupted" message. Always test on Dolphin first.
 
 
