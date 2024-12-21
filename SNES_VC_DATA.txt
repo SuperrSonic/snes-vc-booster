@@ -1,0 +1,98 @@
+- SNES VC Booster Compatibility List -
+
+This is a list of all NTSC-U releases, after testing them with my tool.
+I made note of any title that came with an unused copy of the ROM.
+As well as which titles have the dark filter, and which ones have compression.
+
+01. F-Zero (Korean ver. updates HOME Menu)
+02. SimCity
+03. Street Fighter II The World Warrior | updtd HOME Menu | SNSS20_20061025.bin
+04. Super Castlevania IV | SNSAD0.025
+05. R-Type III: The Third Lightning | SNSER0.455
+06. Zelda: ALTTP | SNSZL0.038
+07. Contra III The Alien Wars | SNSCS0.058
+08. Super Mario World
+09. Donkey Kong Country
+10. Super Ghouls 'n Ghosts | SNSCM0.039
+11. Romance of the Three Kingdoms IV: Wall of Fire | SNAS4E0.605
+12. Gradius III | SNSG30.008 | SNSG30.008.bak
+13. The Legend of the Mystical Ninja | SNSGG0.024
+14. Final Fight | SNSFT0.012 | SNSFT0_20070206.bin
+15. Donkey Kong Country 2: Diddy's Kong Quest | SNADNE1.667
+16. ActRaiser | SNSAR0.006
+17. Street Fighter II' Turbo: Hyper Fighting
+18. Kirby's Dream Course | DARK FILTER | SNSCG0.047
+19. Super Metroid
+20. Breath of Fire II | DARK FILTER | MOTION BLUR | SNAF2E0.668
+21. Kirby's Avalanche
+22. Metal Marines
+23. Axelay | *DARK FILTER
+24. Vegas Stakes | (Detects dark filter but doesn't seem to use it.)
+25. Cybernator
+26. Donkey Kong Country 3: Dixie Kong's Double Trouble!
+27. Pac-Attack
+28. Super Street Fighter II: The New Challengers
+29. Harvest Moon
+30. Super Turrican | 1.29 MB DOL
+31. DoReMi Fantasy: Milon's DokiDoki Adventure | 1.29 MB DOL
+32. Super R-Type | 1.29 MB DOL
+33. Super Mario RPG | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB | DetectsDarkF
+34. Super Turrican 2 | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB
+35. Secret of Mana | DARK FILTER | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB
+36. Space Invaders | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB
+37. Kirby's Dream Land 3 | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB
+38. Ogre Battle | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB | DetectsDynamicD
+39. Super Punch Out!! | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | ESRB
+40. Uncharted Waters | DARK FILTER | LZH8 | ESRB
+41. Nobunaga's Ambition | LZH8 | ESRB
+42. Genghis Khan II | LZH8 | ESRB
+43. Super Star Wars | LZH8 | ESRB
+44. Super Empire Strikes Back | LZH8
+45. Super ROJ | *DARK FILTER 20% | LZH8 | ESRB
+46. Final Fight 2 | LZH8 | ESRB
+47. Zombies Ate My Neighbors | LZH8 | ESRB
+48. Indiana Jones' Greatest Adventures | LZH8 | ESRB
+49. Super Mario Kart | LZH8 | ESRB
+50. The Combatribes | LZH8 | ESRB
+51. Street Fighter Alpha 2 | LZH8 | ESRB | LZH8JDCE.sda
+52. Pilotwings | LZH8 | ESRB
+53. Final Fight 3 | LZH8 | ESRB
+54. Ghoul Patrol | LZH8 | ESRB
+55. Final Fantasy II | DARK FILTER 12% | LZH8 | ESRB
+56. Kirby Super Star | DARK FILTER 30% | LZH8 | ESRB
+57. Wild Guns | *DARK FILTER 20% | LZH8 | ESRB
+58. Aero the Acro-Bat | LZH8 | ESRB | NOTE: --no-dark crashes tool for some reason
+59. Aero the Acro-Bat 2 | LZH8 | ESRB
+60. Final Fantasy Mystic Quest | LZH8 | ESRB
+61. Darius Twin | LZH8 | ESRB
+62. Natsume Championship Wrestling | LZH8 | ESRB
+63. Super Bonk | LZH8 | ESRB
+64. Mega Man X | LZH8 | ESRB
+65. Rival Turf! | LZH8 | ESRB
+66. Chrono Trigger | LZH8 | ESRB
+67. Super Adventure Island | LZH8 | ESRB
+68. Final Fantasy III | LZH8 | ESRB
+69. Super E.D.F. | *DARK FILTER 20% | LZH8 | ESRB
+70. Brawl Brothers | LZH8 | ESRB
+71. Super Adventure Island II | LZH8
+72. The Ignition Factor | LZH8 | ESRB
+73. Mega Man X2 | LZH8
+74. Prince of Persia | LZH8
+
+Super Mario All-Stars (25th Anniv. Disc) | DARK FILTER 12% | LZH8
+
+PAL:
+Mario's Super Picross
+
+JPN:
+Fire Emblem Seisen no Keifu | *DARK FILTER
+Final Fantasy V | DOL LZ11 | LZH8
+Bahamut Lagoon | DOL LZ11 | LZH8
+Panel de Pon | *DARK FILTER
+Kunio-kun no Dodgeball | DOL LZ11 | LZH8
+
+KOR:
+Panel de Pon | DOL LZ11 | LZ77 ROM, Huf8 PCM, LZ77man | *DARK FILTER
+
+*Dark filter with asterisk has an unknown method and won't be patched by my app.
+Brightness increase by patching vfilter is a simple alternative.
