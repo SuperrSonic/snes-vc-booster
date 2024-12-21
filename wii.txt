@@ -1,0 +1,21 @@
+# Wii Remote to SNES mapping
+# You can write P1 on SNES P2 to make Wii Remote P1 control SNES P2 (--wiimote-emu only)
+
+wiiP1: 0x80215648
+wiiP2: NONE
+
+snesP1: 0x8053931A
+snesP2: 0x805646B8
+
+1=Y
+2=B
+A=A
+B=X
+
+Up=Left
+Down=Right
+Left=Down
+Right=Up
+
+Plus=Start
+Minus=Select
