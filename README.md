@@ -146,8 +146,11 @@ Compressed .app/.dol files are not supported and will need to be decompressed fi
 # Credits
 
 The code used for removing VI scaling is taken from: https://github.com/wiidev/usbloadergx
+
 The nandloader I chose to apply one-time patches: https://github.com/OpenShopChannel/nandloader
+
 WiiPAX (the actual nandloader): https://github.com/fail0verflow/hbc/tree/master/wiipax
+
 The channel loading patches and LZ decompression: https://github.com/LemonBoy/taiko
 
 The gecko code for increasing brightness in Super ROTJ using vfilter is based on the 'Removing Deflicker' patch from USB Loader GX. Instead of removing it I just increase the middle coef until whites are 0xFFFFFF.
