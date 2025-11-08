@@ -3,6 +3,8 @@
 
 This is a commandline program that can search through the 01.app of a SNES/SFC VC title applying various patches to improve the user experience.
 
+# Preview
+https://www.youtube.com/watch?v=gUQcyJKAmZI
 
 # Basic usage
 
