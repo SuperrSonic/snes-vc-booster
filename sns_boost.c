@@ -273,6 +273,11 @@ const uint8_t wiimoteHook3[0x18] = {
 	0x88, 0x9F, 0x00, 0x51, 0x38, 0x63, 0xF7, 0xF0
 };
 
+// Playlog
+const uint8_t playRec[9] = {
+	0x1C, 0xC5, 0x00, 0x3C, 0x7C, 0xA0, 0x22, 0x14, 0x4B
+};
+
 uint16_t getSNS_native(const char* snesPad)
 {
 	uint16_t val = 0;
@@ -369,6 +374,7 @@ int main (int argc, char *argv[])
   int no_check = 0;
   int wideWant = 0;
   int pixel_perf = 0;
+  int no_playRec = 0;
   bool verbose = false;
   
   bool useType3 = false; //for wiimote emu
@@ -505,6 +511,14 @@ int main (int argc, char *argv[])
 				++workType;
             }
 			
+			if(strcmp(argv[i], "--no-playrec") == 0) {
+				no_playRec = 1;
+				printf("1 minute PlayRecord updates will be removed...\n");
+				printf("NOTE: Message Board times will still update, but only on exit...\n");
+				
+				++workType;
+            }
+			
 			if(strcmp(argv[i], "--verbose") == 0 || strcmp(argv[i], "-v") == 0) {
 				verbose = true;
 				printf("Verbosity set...\n");
@@ -532,6 +546,7 @@ int main (int argc, char *argv[])
 				printf("\"--wiimote-emu\" = Opens wii.txt to build a C2 code that allows playing with JUST a Wii Remote.\n");
 				printf("\"--wiimote-native\" = Enables native Wii Remote support.\n");
 				printf("\"--wide\" = Restores widescreen detection for the HOME Menu.\n");
+				printf("\"--no-playrec\" = Prevents writing to play_rec.dat on NAND every minute.\n  This won't break playlog times, but if there's a power cut\n  or crash, it won't record the latest time.\n");
 				printf("\"--no-opera\" = Prevents writing opera.arc to NAND, for games that have no e-manuals.\n");
 				printf("\"--no-hbmse\" = Prevents writing HBMSE.arc to NAND.\n");
 				printf("\"--no-save\" = Prevents writing savedata.bin, for custom games that have no save.\n");
@@ -597,6 +612,22 @@ int main (int argc, char *argv[])
 							printf("Adjusted volume to maximum! 0x%X\n", p);
 						else
 							printf("Adjusted volume to maximum!\n");
+						
+						//Warn about volume patch's simplicity
+						if(p > 0xFFFF)
+							printf("Volume pattern is at an unusual spot,\nensure volume hasn't been patched already!\n\n");
+					}
+					else if(no_playRec && memcmp(&datBuf[p], playRec, 9) == 0) {
+						no_playRec = 0;
+						datBuf[p+8]  = 0x60; // nopping this bl prevents the game from updating
+						datBuf[p+9]  = 0;    // the playlog every minute, but still updates when exiting.
+						datBuf[p+10] = 0;
+						datBuf[p+11] = 0;
+						
+						if(verbose)
+							printf("Removed 1-minute playlog updates! 0x%X\n", p);
+						else
+							printf("Removed 1-minute playlog updates!\n");
 					}
 					else if(no_dark && memcmp(&datBuf[p], dark_kby, 8) == 0) {
 						no_dark = 0;
