@@ -43,6 +43,8 @@ Edit wii.txt to change Wii Remote mappings. You can also manually set patches on
 
 --no-header-check-simple = Only remove ROM header checks, less compatible but allows saving SRAM.
 
+--no-playrec = Remove writes to the message board that occur every minute, exit will still update the playlog.
+
 /help = Displays all of this info.
 
 
